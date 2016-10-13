@@ -8,9 +8,14 @@ get '/questions/new' do
 end
 
 post '/questions' do
+
+ @question = Question.create(title: params[:title], question:params[:body])
+redirect '/questions'
 end
 
-get 'questions/:id' do
+get '/questions/:id' do
+
+  @question = Question.find(params[:id])
   erb :'questions/show'
 end
 

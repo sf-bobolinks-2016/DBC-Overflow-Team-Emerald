@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Welcome to DBC Overflow!</title>
-</head>
-<body>
 <h1> Welcome to DBC Overflow! </h1>
+<h2><a href="/questions/new">Post a question:</a></h2>
 <ul>
 <% @questions.each do |question| %>
-  <li><%= question.title %></li>
+  <a href="/questions/<%=question.id%>"><li><%= question.title %></li></a>
 <% end %>
 </ul>
 
-</form>
-</body>
-</html>
 

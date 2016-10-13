@@ -1,11 +1,11 @@
 get '/' do
-  erb :welcome
+  redirect '/questions'
 end
 
 get '/login' do
-  
+
 end
 
 get '/signup' do
-  
+
 end
