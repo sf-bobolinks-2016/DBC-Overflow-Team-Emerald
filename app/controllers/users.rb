@@ -8,7 +8,7 @@ post '/users' do
 		user = User.new(email: 	 params[:email],
 										password: params[:password])
 		if user.save
-			session[:id] = user.id
+			session[:user_id] = user.id
 		end
 	end
 	redirect "/"
