@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to DBC Overflow!</title>
+</head>
+<body>
+<h1> Welcome to DBC Overflow! </h1>
+<ul>
+<% @questions.each do |question| %>
+  <li><%= question.title %></li>
+<% end %>
+</ul>
+
+</form>
+</body>
+</html>
+
