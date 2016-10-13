@@ -1,5 +1,7 @@
 get '/' do
-  redirect '/questions'
+
+  redirect "/questions"
+
 end
 
 get '/login' do
