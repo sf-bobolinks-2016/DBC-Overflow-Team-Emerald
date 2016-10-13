@@ -1,5 +1,5 @@
 get '/' do
-  redirect '/questions'
+  erb :welcome
 end
 
 get '/login' do
