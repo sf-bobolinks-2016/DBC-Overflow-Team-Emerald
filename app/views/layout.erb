@@ -24,10 +24,12 @@
   <header>
     <a href="/"><img src="/img/zenchinese.png" class="logo"></a>
     <div id="login-toolbar">
-      <% if current_user %>
+      <% if logged_in? %>
         <a href="/logout">Logout</a>
       <% else %>
         <a href="/login">Login</a>
+        <text> | </text>
+        <a href="/users/new">Register</a>
       <% end %>
   </header>
   <%= yield %>
