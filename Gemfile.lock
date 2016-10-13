@@ -88,6 +88,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   activesupport
+  bcrypt
   bcrypt-ruby
   capybara
   database_cleaner (~> 1.4.1)
@@ -101,3 +102,6 @@ DEPENDENCIES
   shoulda-matchers
   sinatra
   sinatra-contrib
+
+BUNDLED WITH
+   1.13.2
