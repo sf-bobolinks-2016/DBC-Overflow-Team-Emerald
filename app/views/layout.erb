@@ -22,13 +22,18 @@
 <body>
 <div id="content">
   <header>
-    <a href="/"><img src="/img/zenchinese.png" class="logo"></a>
     <div id="login-toolbar">
       <% if logged_in? %>
-        <a href="/logout">Logout</a>
+        <a href="/sessions/delete">Logout</a>
       <% else %>
-        <a href="/login">Login</a>
-        <text> | </text>
+      <%= @errors %>
+        <form align="center" action="/sessions" method="post">
+          <div><label>Email:</label><input type="email" name="email">
+
+          <label>Password:</label><input type="password" name="password">
+   
+          <input type="submit" value="Login"></div></form>
+        <text> / </text>
         <a href="/users/new">Register</a>
       <% end %>
   </header>
