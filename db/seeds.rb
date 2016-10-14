@@ -14,7 +14,7 @@ end
 users_id_array = users.reduce([]) { |ids, user| ids << user.id }
 
 100.times do |i|
-  questions << Question.create(title: Faker::Hipster.sentence,
+  questions << Question.create(title: Faker::Hipster.sentence.gsub(".", "?"),
                                question: Faker::Hipster.paragraph(10, false),
                                user_id: users_id_array.sample)
 end

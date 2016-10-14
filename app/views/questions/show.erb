@@ -14,13 +14,11 @@
 </div>
 <br>
 <div class="answer">
-  <ul>
     <% @answers.each do |a|%>
-    <li><%= a.answer %><br>
+    <p><%= a.answer %><br>
       <% @answer = a %>
       <b><u>*Author: <%= a.user.email %></u></b>
       <%= erb :"/comments/_answer_comments" %>
-    </li>
+    </p>
     <% end %>
-  </ul>
 </div>
