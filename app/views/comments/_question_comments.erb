@@ -1,7 +1,9 @@
 <div>
-  <% @question.comments.each do |comment| %>
-    <%= comment.comment %>
-  <% end %>
+  <ul>
+    <% @question.comments.each do |comment| %>
+      <li><%= comment.comment %></li>
+    <% end %>
+  </ul>
 </div>
 
 

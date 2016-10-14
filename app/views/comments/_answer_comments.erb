@@ -1,5 +1,7 @@
 <div>
-  <% @answer.comments.each do |comment| %>
-    <%= comment.comment %>
-  <% end %>
+  <ul>
+    <% @answer.comments.each do |comment| %>
+      <li><%= comment.comment %></li>
+    <% end %>
+  </ul>
 </div>
