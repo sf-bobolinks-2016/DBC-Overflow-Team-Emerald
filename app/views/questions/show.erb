@@ -1,6 +1,7 @@
 <h1><%=@question.title%></h1>
 <br>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <%=@question.question%><br>
 <div class='answers'>
 <ul>
@@ -12,13 +13,15 @@
 <% end %>
 </ul>
 =======
+=======
+>>>>>>> 1ebfffd9d9e49df37e4dfa0462babef3d8a831c1
 <div>
   <%=@question.question%>
   <%= erb :"/comments/_question_comments" %>
 </div>
 <div class="answer-form">
   <form id ="answers" method="post" action="/answers">
-    <textarea name="answer" rows="8" cols="40" placeholder="Your Answer"></textarea>
+    <textarea name="answer" rows="5" cols="80" placeholder="Your Answer"></textarea>
     <br />
     <input type="submit" value="submit answer">
     <input type="hidden" name="question_id" value="<%=@question.id%>">
@@ -35,5 +38,8 @@
     </li>
     <% end %>
   </ul>
+<<<<<<< HEAD
 >>>>>>> 76d62d3b332ee1b7de981e3446a9195d65c73a9b
+=======
+>>>>>>> 1ebfffd9d9e49df37e4dfa0462babef3d8a831c1
 </div>
