@@ -8,13 +8,15 @@ get '/questions/new' do
 end
 
 post '/questions' do
-
- @question = Question.create(title: params[:title], question:params[:body])
-redirect '/questions'
+	if logged_in?
+		@question = Question.create(title: params[:title], question:params[:body])
+		redirect '/questions'
+	else 
+		redirect '/users/new'
+	end
 end
 
 get '/questions/:id' do
-
   @question = Question.find(params[:id])
   @answers = @question.answers
   erb :'questions/show'
