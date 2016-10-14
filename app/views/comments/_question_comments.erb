@@ -1,0 +1,11 @@
+<div>
+  <ul>
+    <% @question.comments.each do |comment| %>
+      <li><%= comment.comment %></li>
+    <% end %>
+  </ul>
+</div>
+
+
+<!-- Comment.where(answer_id: nil) -->
+<!-- Comment.where(question: nil) -->
