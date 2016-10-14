@@ -1,5 +1,6 @@
 <h1><%=@question.title%></h1>
 <br>
+<<<<<<< HEAD
 <%=@question.question%><br>
 <div class='answers'>
 <ul>
@@ -10,11 +11,29 @@
 </li>
 <% end %>
 </ul>
+=======
+<div>
+  <%=@question.question%>
+  <%= erb :"/comments/_question_comments" %>
 </div>
-
-<form id ="answers" method="post" action="/answers">
-  <input type="text" name="answer" placeholder="your response">
-  <input type="submit" value="submit answer">
-  <input type="hidden" name="question_id" value="<%=@question.id%>">
-</form>
-
+<div class="answer-form">
+  <form id ="answers" method="post" action="/answers">
+    <textarea name="answer" rows="8" cols="40" placeholder="Your Answer"></textarea>
+    <br />
+    <input type="submit" value="submit answer">
+    <input type="hidden" name="question_id" value="<%=@question.id%>">
+  </form>
+</div>
+<br>
+<div class="answer">
+  <ul>
+    <% @answers.each do |a|%>
+    <li><%= a.answer %><br>
+      <% @answer = a %>
+      <b><u>*Author: <%= a.user.email %></u></b>
+      <%= erb :"/comments/_answer_comments" %>
+    </li>
+    <% end %>
+  </ul>
+>>>>>>> 76d62d3b332ee1b7de981e3446a9195d65c73a9b
+</div>

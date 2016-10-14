@@ -1,7 +1,7 @@
 <div>
   <ul>
     <% @answer.comments.each do |comment| %>
-      <li><%= comment.comment %></li>
+      <li><%= "#{comment.comment} (#{comment.user.email})" %></li>
     <% end %>
   </ul>
 </div>
