@@ -1,20 +1,5 @@
 <h1><%=@question.title%></h1>
 <br>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<%=@question.question%><br>
-<div class='answers'>
-<ul>
-<% @answers.each do |a|%>
-<%= @answers %>
-<li><%= a.answer %><br>
-<b><u>*Author: <%= a.user.email %></u></b>
-</li>
-<% end %>
-</ul>
-=======
-=======
->>>>>>> 1ebfffd9d9e49df37e4dfa0462babef3d8a831c1
 <div>
   <%=@question.question%>
   <%= erb :"/comments/_question_comments" %>
@@ -38,8 +23,4 @@
     </li>
     <% end %>
   </ul>
-<<<<<<< HEAD
->>>>>>> 76d62d3b332ee1b7de981e3446a9195d65c73a9b
-=======
->>>>>>> 1ebfffd9d9e49df37e4dfa0462babef3d8a831c1
 </div>
